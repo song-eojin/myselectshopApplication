@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@RestController //@Controller(@Component) + @ResponseBody
 @RequiredArgsConstructor
 @RequestMapping("/api")
 public class ProductController {
