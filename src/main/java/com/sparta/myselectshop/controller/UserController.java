@@ -88,7 +88,7 @@ public class UserController {
         String token = kakaoService.kakaoLogin(code);
         //code 를 service 단에 보내 로직이 처리된 후 반환되는 값이 바로 jwt token 이다.
 
-        Cookie cookie = new Cookie(JwtUtil.AUTHORIZATION_HEADER, token);
+        Cookie cookie = new Cookie(JwtUtil.AUTHORIZATION_HEADER, token.substring(7));
         //쿠키를 직접 생성해서 service 단에서 받은 jwt 를 쿠키에 담는다.
 
         cookie.setPath("/");
